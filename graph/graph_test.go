@@ -8,14 +8,13 @@ import (
 func TestGraph_String(t *testing.T) {
 	g := NewGraph()
 
-	g.Directed = true
-
 	g.AddEdge(Vertex{1}, Vertex{2})
 	g.AddEdge(Vertex{2}, Vertex{3})
 	g.AddEdge(Vertex{2}, Vertex{4})
 	g.AddEdge(Vertex{1}, Vertex{4})
 
-	g.AddVertex(Vertex{1})
+	g.AddVertex(Vertex{5})
+	// g.AddEdge(Vertex{5}, Vertex{6})
 
-	fmt.Println(g)
+	fmt.Println(g.GetEdges())
 }
